@@ -1,6 +1,6 @@
 # 风格
 
-## 通用排版
+## 通用排版（与代码内容无关）
 
 1. 使用空格而不是 tab 缩进。
 
@@ -64,7 +64,7 @@
 
     [ESLint](https://eslint.org/docs/rules/eol-last)：`"eol-last": ["error", "always"]`
 
-9. 使用单引号
+9. 尽量使用单引号
 
     理由：排版更清爽，更多是习惯问题。
 
@@ -77,3 +77,47 @@
     缺点：如果不注意，尾部逗号在老版本的 IE 中可能导致报错，变量声明中可能造成内存泄露问题。
 
     [ESLint](https://eslint.org/docs/rules/comma-style)：`"comma-style": ["error", "last"]`
+
+
+---
+
+
+## 通用语句格式（与代码内容有关）
+
+1. 每行只能有一条进行变量初始化的声明语句
+
+    理由：可读性更强。
+
+    缺点：增加了行数？
+
+    [ESLint](https://eslint.org/docs/rules/comma-style)：`"one-var-declaration-per-line": ["error", "initializations"]`
+
+2. 每行只能有一条语句，不包括声明简写形式
+
+    理由：可读性更强，排版更美观。
+
+    缺点：增加了行数？
+
+    [ESLint](https://eslint.org/docs/rules/max-statements-per-line)：`"max-statements-per-line": ["error", { "max": 1 }]`
+
+3. 一元操作符后必须有一个空格，如果是关键字则不需要
+
+    理由：习惯写法，阅读者更好懂。
+
+    [ESLint](https://eslint.org/docs/rules/space-unary-ops)：`"space-unary-ops": "error"`
+
+4. 两元操作符后前后必须有一个空格
+
+    理由：可读性更强，排版更美观。
+
+    缺点：习惯性问题。
+
+    [ESLint](https://eslint.org/docs/rules/space-infix-ops)：`"space-infix-ops": "error"`
+
+5. 关键字前后必须留一个空格
+
+    理由：可读性更强，排版更美观。
+
+    缺点：习惯性问题。
+
+    [ESLint](https://eslint.org/docs/rules/keyword-spacing)：`"keyword-spacing": "error"`
