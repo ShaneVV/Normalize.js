@@ -78,6 +78,14 @@
 
     [ESLint](https://eslint.org/docs/rules/comma-style)：`"comma-style": ["error", "last"]`
 
+11. 单行最多 120 个字符
+
+    理由：单行过多不好，但是太少，像习惯性地设置成80也会太少，因为现在一个缩进就四个空格了，还有一个理由是 github 单行最多放下 <130 个字符。
+
+    缺点：有时候真的还是单行更好排版，写代码时候回非常纠结。
+
+    [ESLint](https://eslint.org/docs/rules/max-len)：`"max-len": ["error", { "code": 120 }]`
+
 
 ---
 
@@ -121,3 +129,35 @@
     缺点：习惯性问题。
 
     [ESLint](https://eslint.org/docs/rules/keyword-spacing)：`"keyword-spacing": "error"`
+
+6. 强制驼峰命名
+
+    理由：习惯性写法。
+
+    缺点：实际开发中难以统一，需要与后端协调。
+
+    [ESLint](https://eslint.org/docs/rules/camelcase)：`"camelcase": "error"`
+
+7. 大括号（代码块）前总是需要一个空格
+
+    理由：个人习惯，多一个空格不会显得那么挤。
+
+    缺点：习惯问题。
+
+    [ESLint](https://eslint.org/docs/rules/space-before-blocks)：`"space-before-blocks": "error"`
+
+8. 大于两级的链式调用必须换行
+
+    理由：调用层级更加清晰，可读性更强。
+
+    缺点：浪费空间？
+
+    [ESLint](https://eslint.org/docs/rules/newline-per-chained-call)：`"newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }]`
+
+9. 冒号后必须加空格，而前面不能加
+
+    理由：习惯问题，也是大多数人的习惯，可读性更强。
+
+    缺点：习惯问题。
+
+    [ESLint](https://eslint.org/docs/rules/semi-spacing)：`"semi-spacing": "error"`
