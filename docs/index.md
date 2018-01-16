@@ -161,3 +161,49 @@
     缺点：习惯问题。
 
     [ESLint](https://eslint.org/docs/rules/semi-spacing)：`"semi-spacing": "error"`
+
+10. 采用 1tbs(one true brace style) 大括号风格（大括号与关键字同行）
+
+    理由：排版足够清晰且节省空间，也是大多数人的习惯。
+
+    [ESLint](https://eslint.org/docs/rules/brace-style)：`"brace-style": "error"`
+
+11. 所有语句块都需要大括号（警告）
+
+    理由：便于维护。
+
+    缺点：排版不够简单。
+
+    [ESLint](https://eslint.org/docs/rules/curly-style)：`"curly-style": "warn"`
+
+
+---
+
+
+## 特定格式 -- 函数
+
+1. 函数声明函数名与参数左括号间不空格
+
+    理由：虽然纠结了很久，空格与不空格都使用过，最后还是选择了不空格，个人选择而已。
+
+    [ESLint](https://eslint.org/docs/rules/space-before-function-paren)：`"space-before-function-paren": ["error", "never"]`
+
+2. 函数调用函数名与做考好间不允许空格
+
+    理由：习惯 + 排版，并且容易给代码阅读者造成困惑。
+
+    [ESLint](https://eslint.org/docs/rules/func-call-spacing)：`"func-call-spacing": "error"`
+
+3. 大括号与声明同行
+
+    理由：习惯。
+
+    [ESLint](https://eslint.org/docs/rules/function-paren-newline)：`"function-paren-newline": ["error", "never"]`
+
+4. 使用函数声明而不是函数表达式（警告）
+
+    理由：保持风格的统一，并且可以利用函数作用域提升的特性。
+
+    缺点：函数作用域提升容易造成读者的困惑。
+
+    [ESLint](https://eslint.org/docs/rules/func-style)：`"func-style": ["warn", "declaration"]`
