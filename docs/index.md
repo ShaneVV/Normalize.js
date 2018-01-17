@@ -188,7 +188,7 @@
 
     [ESLint](https://eslint.org/docs/rules/space-before-function-paren)：`"space-before-function-paren": ["error", "never"]`
 
-2. 函数调用函数名与做考好间不允许空格
+2. 函数调用函数名与括号间不允许空格
 
     理由：习惯 + 排版，并且容易给代码阅读者造成困惑。
 
@@ -207,3 +207,42 @@
     缺点：函数作用域提升容易造成读者的困惑。
 
     [ESLint](https://eslint.org/docs/rules/func-style)：`"func-style": ["warn", "declaration"]`
+
+
+---
+
+## 特定格式 -- 对象
+
+1. 对象字面量属性键名冒号后需加一空格，冒号前不允许有空格
+
+    理由：个人觉得这样排版更整洁，也是大多数人的习惯吧。
+
+    [ESLint](https://eslint.org/docs/rules/key-spacing)：`"key-spacing": “error”`
+
+2. 对象字面量，若属性有换行，则括号也都换号；若没有则都不换行。
+
+    理由：排版更加统一以及整洁。
+
+    [ESLint](https://eslint.org/docs/rules/object-curly-newline)：`"object-curly-newline": “error”`
+
+3. 对象字面量，属性键值对与两个括号间永远都留一空格，除了空对象
+
+    理由：边界分割更加清楚。
+
+    缺点：有时候觉得有点多余，排版不紧凑。
+
+    [ESLint](https://eslint.org/docs/rules/object-curly-spacing)：`"object-curly-spacing": [“error”, "always"]`
+
+4. 对象不能在同一行定义多个属性
+
+    理由：可读性更好，并且 diff 更好定位。
+
+    [ESLint](https://eslint.org/docs/rules/object-property-newline)：`"object-property-newline": "error"`
+
+5. 只有在需要时才允许对象属性使用引号
+
+    理由：精简代码。
+
+    缺点：开发者容易造成困惑，也会比较烦吧。
+
+    [ESLint](https://eslint.org/docs/rules/quote-props)：`"quote-props": ["error", "as-needed"]`
