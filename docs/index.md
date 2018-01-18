@@ -78,7 +78,15 @@
 
     [ESLint](https://eslint.org/docs/rules/comma-style)：`"comma-style": ["error", "last"]`
 
-11. 单行最多 120 个字符
+11. 逗号后空一格
+
+    理由：空一格使得可读性更强。
+
+    缺点：浪费空间。
+
+    [ESLint](https://eslint.org/docs/rules/comma-spacing)：`"comma-spacing": “error”`
+
+12. 单行最多 120 个字符
 
     理由：单行过多不好，但是太少，像习惯性地设置成80也会太少，因为现在一个缩进就四个空格了，还有一个理由是 github 单行最多放下 <130 个字符。
 
@@ -98,7 +106,7 @@
 
     缺点：增加了行数？
 
-    [ESLint](https://eslint.org/docs/rules/comma-style)：`"one-var-declaration-per-line": ["error", "initializations"]`
+    [ESLint](https://eslint.org/docs/rules/one-var-declaration-per-line)：`"one-var-declaration-per-line": ["error", "initializations"]`
 
 2. 每行只能有一条语句，不包括声明简写形式
 
@@ -246,3 +254,35 @@
     缺点：开发者容易造成困惑，也会比较烦吧。
 
     [ESLint](https://eslint.org/docs/rules/quote-props)：`"quote-props": ["error", "as-needed"]`
+
+---
+
+## 空行规则（https://eslint.org/docs/rules/padding-line-between-statements）
+
+1. return 前必须空行
+2. 类前后必须空行
+3. export 前必须空行
+
+以上在 ESLint 中规则配置为：
+
+```json
+{
+    "padding-line-between-statements": [
+        "error",
+        { "blankLine": "always" , "prev": "*", "next": "return" },
+        { "blankLine": "always" , "prev": "*", "next": "class" },
+        { "blankLine": "always" , "prev": "class", "next": "any" },
+        { "blankLine": "always" , "prev": "*", "next": "export" },
+    ]
+}
+```
+
+## 其他规则
+
+1. 类声明块中收尾空一行
+
+    理由：边界清晰，增强可读性。
+
+    缺点：浪费空间。
+
+    [ESLint](https://eslint.org/docs/rules/padded-blocks)：`"padded-blocks": ["error", { “classes”: "error" }]`
