@@ -216,6 +216,26 @@
 
     [ESLint](https://eslint.org/docs/rules/func-style)：`"func-style": ["warn", "declaration"]`
 
+5. 箭头函数大括号只有在必要时才允许添加
+
+    理由：对于我来说，能省则省。
+
+    缺点：风格不统一，可维护性减弱了。
+
+    [ESLint](https://eslint.org/docs/rules/arrow-body-style)：`"arrow-body-style": ["error", "as-needed"]`
+
+6. 箭头函数参数括号只有在必要时才允许添加
+
+    理由及缺点同上。
+
+    [ESLint](https://eslint.org/docs/rules/arrow-parens)：`"arrow-parens": ["error", "as-needed"]`
+
+7. 箭头两边留意空格
+
+    理由：排版更加清晰，增强可读性。
+
+    [ESLint](https://eslint.org/docs/rules/arrow-spacing)：`"arrow-spacing": "error"`
+
 
 ---
 
