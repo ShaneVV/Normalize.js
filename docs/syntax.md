@@ -16,6 +16,26 @@
 
     [ESLint](https://eslint.org/docs/rules/no-var)：`"no-var": "error"`
 
+- getter 必须有 return 值
+
+    [ESLint](https://eslint.org/docs/rules/getter-return)：`"getter-return": "error"`
+
+- 不允许在循环语句中使用 await，而是使用 promise.all 代替
+
+    [ESLint](https://eslint.org/docs/rules/no-await-in-loop)：`"no-await-in-loop": "error"`
+
+- 不用和 -0 比较，使用 Object.is(x, -0)
+
+    [ESLint](https://eslint.org/docs/rules/no-compare-neg-zero)：`"no-compare-neg-zero": "error"`
+
+- 不要在条件语句中赋值，因为大部分情况下是写错了
+
+    [ESLint](https://eslint.org/docs/rules/no-cond-assign)：`"no-cond-assign": "error"`
+
+- for 循环计数器方向必须正确，以免进入死循环
+
+    [ESLint](https://eslint.org/docs/rules/for-direction)：`"for-direction": "error"`
+
 ### ES6+
 
 - 不允许使用 var
