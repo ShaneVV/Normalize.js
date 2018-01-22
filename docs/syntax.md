@@ -36,6 +36,28 @@
 
     [ESLint](https://eslint.org/docs/rules/for-direction)：`"for-direction": "error"`
 
+- 条件表达式不允许使用常量表达式
+
+    [ESLint](https://eslint.org/docs/rules/no-constant-condition)：`"no-constant-condition": "error"`
+
+- 函数参数不允许重复
+
+    [ESLint](https://eslint.org/docs/rules/no-dupe-args)：`"no-dupe-args": "error"`
+
+- 对象不允许包含重复的键值
+
+    [ESLint](https://eslint.org/docs/rules/no-dupe-keys)：`"no-dupe-keys": "error"`
+
+- 不允许重复的 case
+
+    [ESLint](https://eslint.org/docs/rules/no-duplicate-case)：`"no-duplicate-case": "error"`
+
+- 不允许空的语句块
+
+    [ESLint](https://eslint.org/docs/rules/no-empty)：`"no-empty": "error"`
+
+---
+
 ### ES6+
 
 - 不允许使用 var
