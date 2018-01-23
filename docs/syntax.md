@@ -56,6 +56,26 @@
 
     [ESLint](https://eslint.org/docs/rules/no-empty)：`"no-empty": "error"`
 
+- 不允许在正则表达式中写 []
+
+    [ESLint](https://eslint.org/docs/rules/no-empty-character-class)：`"no-empty-character-class": "error"`
+
+- 不要做没必要的 Boolean 值转换
+
+    [ESLint](https://eslint.org/docs/rules/no-extra-boolean-cast)：`"no-extra-boolean-cast": "error"`
+
+- 去除没必要的括号
+
+    [ESLint](https://eslint.org/docs/rules/no-extra-parens)：`"no-extra-parens": "error"`
+
+- 不要覆写函数变量
+
+    [ESLint](https://eslint.org/docs/rules/no-func-assign)：`"no-func-assign": "error"`
+
+- 不要在块中声明函数和 var 变量
+
+    [ESLint](https://eslint.org/docs/rules/no-inner-declarations)：`"no-inner-declarations": "error"`
+
 ---
 
 ### ES6+
